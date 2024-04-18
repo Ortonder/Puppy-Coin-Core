@@ -1,4 +1,4 @@
-Puppycoin Core integration/staging repository
+Puppycoin Core README
 =====================================
 
 
