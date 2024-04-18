@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/puppycoin_bg.qm</file>
+        <file alias="ca">locale/puppycoin_ca.qm</file>
+        <file alias="cs">locale/puppycoin_cs.qm</file>
+        <file alias="da">locale/puppycoin_da.qm</file>
+        <file alias="de">locale/puppycoin_de.qm</file>
+        <file alias="en">locale/puppycoin_en.qm</file>
+        <file alias="en_GB">locale/puppycoin_en_GB.qm</file>
+        <file alias="en_US">locale/puppycoin_en_US.qm</file>
+        <file alias="eo">locale/puppycoin_eo.qm</file>
+        <file alias="es">locale/puppycoin_es.qm</file>
+        <file alias="es_ES">locale/puppycoin_es_ES.qm</file>
+        <file alias="fi">locale/puppycoin_fi.qm</file>
+        <file alias="fr_FR">locale/puppycoin_fr_FR.qm</file>
+        <file alias="hi_IN">locale/puppycoin_hi_IN.qm</file>
+        <file alias="hr">locale/puppycoin_hr.qm</file>
+        <file alias="hr_HR">locale/puppycoin_hr_HR.qm</file>
+        <file alias="it">locale/puppycoin_it.qm</file>
+        <file alias="ja">locale/puppycoin_ja.qm</file>
+        <file alias="ko_KR">locale/puppycoin_ko_KR.qm</file>
+        <file alias="lt_LT">locale/puppycoin_lt_LT.qm</file>
+        <file alias="nl">locale/puppycoin_nl.qm</file>
+        <file alias="pl">locale/puppycoin_pl.qm</file>
+        <file alias="pt">locale/puppycoin_pt.qm</file>
+        <file alias="pt_BR">locale/puppycoin_pt_BR.qm</file>
+        <file alias="ro_RO">locale/puppycoin_ro_RO.qm</file>
+        <file alias="ru">locale/puppycoin_ru.qm</file>
+        <file alias="sk">locale/puppycoin_sk.qm</file>
+        <file alias="sv">locale/puppycoin_sv.qm</file>
+        <file alias="tr">locale/puppycoin_tr.qm</file>
+        <file alias="uk">locale/puppycoin_uk.qm</file>
+        <file alias="vi">locale/puppycoin_vi.qm</file>
+        <file alias="zh_CN">locale/puppycoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/puppycoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

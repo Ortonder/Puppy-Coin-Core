@@ -1,0 +1,81 @@
+policy_module(puppycoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type puppycoin_t;
+type puppycoin_exec_t;
+init_daemon_domain(puppycoin_t, puppycoin_exec_t)
+
+permissive puppycoin_t;
+
+type puppycoin_initrc_exec_t;
+init_script_file(puppycoin_initrc_exec_t)
+
+type puppycoin_conf_t;
+files_type(puppycoin_conf_t)
+
+type puppycoin_var_lib_t;
+files_type(puppycoin_var_lib_t)
+
+type puppycoin_var_run_t;
+files_type(puppycoin_var_run_t)
+
+type puppycoin_port_t;
+corenet_port(puppycoin_port_t)
+
+########################################
+#
+# puppycoin local policy
+#
+allow puppycoin_t self:process { fork };
+
+allow puppycoin_t self:fifo_file rw_fifo_file_perms;
+allow puppycoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(puppycoin_t, puppycoin_conf_t, puppycoin_conf_t)
+manage_files_pattern(puppycoin_t, puppycoin_conf_t, puppycoin_conf_t)
+
+manage_dirs_pattern(puppycoin_t, puppycoin_var_lib_t, puppycoin_var_lib_t)
+manage_files_pattern(puppycoin_t, puppycoin_var_lib_t, puppycoin_var_lib_t)
+files_var_lib_filetrans(puppycoin_t, puppycoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(puppycoin_t, puppycoin_var_run_t, puppycoin_var_run_t)
+manage_files_pattern(puppycoin_t, puppycoin_var_run_t, puppycoin_var_run_t)
+
+sysnet_dns_name_resolve(puppycoin_t)
+corenet_all_recvfrom_unlabeled(puppycoin_t)
+
+allow puppycoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(puppycoin_t)
+corenet_tcp_sendrecv_generic_node(puppycoin_t)
+corenet_tcp_sendrecv_all_ports(puppycoin_t)
+corenet_tcp_bind_generic_node(puppycoin_t)
+
+gen_require(`
+    type puppycoin_port_t;
+')
+allow puppycoin_t puppycoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type puppycoin_port_t;
+')
+allow puppycoin_t puppycoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(puppycoin_t)
+
+files_read_etc_files(puppycoin_t)
+
+miscfiles_read_localization(puppycoin_t)
+
+sysnet_dns_name_resolve(puppycoin_t)
+
+allow puppycoin_t puppycoin_exec_t:file execute_no_trans;
+allow puppycoin_t self:process setsched;
+corecmd_exec_ls(puppycoin_t)
+corenet_tcp_connect_http_port(puppycoin_t)
+dev_read_urand(puppycoin_t)
+fs_getattr_xattr_fs(puppycoin_t)
+kernel_read_system_state(puppycoin_t)

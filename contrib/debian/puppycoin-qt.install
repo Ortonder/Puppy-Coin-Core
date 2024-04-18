@@ -1,0 +1,6 @@
+usr/local/bin/puppycoin-qt usr/bin
+share/pixmaps/puppycoin32.xpm usr/share/pixmaps
+share/pixmaps/puppycoin16.xpm usr/share/pixmaps
+share/pixmaps/puppycoin128.png usr/share/pixmaps
+debian/puppycoin-qt.desktop usr/share/applications
+debian/puppycoin-qt.protocol usr/share/kde4/services/

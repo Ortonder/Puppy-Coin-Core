@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Puppycoin Core
+Comment=Puppycoin P2P Cryptocurrency
+Comment[fr]=Puppycoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Puppycoin, eşten eşe kriptografik sanal para birimi
+Exec=puppycoin-qt %u
+Terminal=false
+Type=Application
+Icon=puppycoin128
+MimeType=x-scheme-handler/puppycoin;
+Categories=Office;Finance;
+StartupWMClass=Puppycoin-qt

@@ -1,0 +1,3 @@
+usr/local/bin/puppycoind usr/bin
+usr/local/bin/puppycoin-cli usr/bin
+debian/examples/puppycoin.conf etc/puppycoin
